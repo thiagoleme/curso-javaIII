@@ -1,4 +1,8 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco;
+
+import br.com.trilha.java.cursoIII.banco.conta.ContaCorrente;
+import br.com.trilha.java.cursoIII.banco.seguro.SeguroDeVida;
+import br.com.trilha.java.cursoIII.banco.sistema.GerenciadorDeImpostoDeRenda;
 
 public class TestaGerenciadorDeImpostoDeRenda {
 	public static void main(String[] args) {

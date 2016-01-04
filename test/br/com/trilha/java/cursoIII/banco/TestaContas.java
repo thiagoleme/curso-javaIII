@@ -1,6 +1,12 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco;
 
 import org.junit.Test;
+
+import br.com.trilha.java.cursoIII.banco.conta.Conta;
+import br.com.trilha.java.cursoIII.banco.conta.ContaCorrente;
+import br.com.trilha.java.cursoIII.banco.conta.ContaPoupanca;
+import br.com.trilha.java.cursoIII.banco.conta.ValorInvalidoException;
+
 import static org.junit.Assert.*;
 
 public class TestaContas {

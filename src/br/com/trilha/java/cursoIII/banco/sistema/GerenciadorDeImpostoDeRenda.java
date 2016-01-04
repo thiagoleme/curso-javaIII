@@ -1,9 +1,11 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco.sistema;
+
+import br.com.trilha.java.cursoIII.banco.interfaces.Tributavel;
 
 public class GerenciadorDeImpostoDeRenda {
 	private double total;
 
-	void adiciona(Tributavel t){
+	public void adiciona(Tributavel t){
 		System.out.println("Adicionando Tributavel: " + t);
 		
 		this.total += t.calculaTributos();

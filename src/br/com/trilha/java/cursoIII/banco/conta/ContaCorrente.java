@@ -1,4 +1,6 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco.conta;
+
+import br.com.trilha.java.cursoIII.banco.interfaces.Tributavel;
 
 public class ContaCorrente extends Conta implements Tributavel{
 	@Override

@@ -1,4 +1,6 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco.sistema;
+
+import br.com.trilha.java.cursoIII.banco.conta.Conta;
 
 public class AtualizadorDeContas {
 	private double saldoTotal = 0;

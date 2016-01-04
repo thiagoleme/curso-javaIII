@@ -1,4 +1,4 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco.conta;
 
 @SuppressWarnings("serial")
 public class ValorInvalidoException extends RuntimeException{

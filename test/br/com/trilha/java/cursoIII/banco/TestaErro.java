@@ -1,4 +1,4 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco;
 
 class TestaErro {
 	public static void main(String[] args) {

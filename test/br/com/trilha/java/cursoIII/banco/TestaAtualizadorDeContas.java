@@ -1,4 +1,9 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco;
+
+import br.com.trilha.java.cursoIII.banco.conta.Conta;
+import br.com.trilha.java.cursoIII.banco.conta.ContaCorrente;
+import br.com.trilha.java.cursoIII.banco.conta.ContaPoupanca;
+import br.com.trilha.java.cursoIII.banco.sistema.AtualizadorDeContas;
 
 public class TestaAtualizadorDeContas {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package br.com.trilha.java.cursoII;
+package br.com.trilha.java.cursoIII.banco.interfaces;
 
 public interface Tributavel {
 	double calculaTributos();
