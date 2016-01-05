@@ -36,7 +36,8 @@ public class TestaString {
 		String inverter2 = "anotaram a data da maratona";
 		TestaString.imprimeInvertido(inverter2);
 		
-		TestaString.imprimePalavrasInvertidas(inverter);
+		String inverterPalavras = "Socorram-me, subi no ônibus em Marrocos";
+		TestaString.imprimePalavrasInvertidas(inverterPalavras);
 	}
 
 	private static void imprimePalavrasInvertidas(String inverter) {
@@ -48,10 +49,9 @@ public class TestaString {
 	}
 
 	private static void imprimeInvertido(String inverter) {
-		for (int i = inverter.length() - 1; i >= 0; i--) {
-			System.out.print(inverter.charAt(i));
-		}
-		System.out.println();
+		System.out.print("\t");
+        StringBuilder invertido = new StringBuilder(inverter).reverse();
+        System.out.println(invertido);
 	}
 
 	private static void imprimeCaracteres(String string) {
