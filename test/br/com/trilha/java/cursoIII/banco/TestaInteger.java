@@ -10,5 +10,15 @@ public class TestaInteger {
 		} else {
 			System.out.println("diferente");
 		}
+		
+		
+		String valida = "2110";
+		int num = Integer.parseInt(valida);
+		System.out.println(num);
+		
+		String invalida = "21/10";
+		int num2 = Integer.parseInt(invalida);
+		System.out.println(num2);
+		
 	}
 }

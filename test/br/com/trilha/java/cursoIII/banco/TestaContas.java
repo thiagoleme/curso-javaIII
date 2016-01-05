@@ -13,9 +13,9 @@ public class TestaContas {
 
 	@Test
 	public void AtualizaContas() {
-		Conta c = new ContaCorrente();
-		Conta cc = new ContaCorrente();
-		Conta cp = new ContaPoupanca();
+		Conta c = new ContaCorrente(1);
+		Conta cc = new ContaCorrente(2);
+		Conta cp = new ContaPoupanca(3);
 
 		c.deposita(1000);
 		cc.deposita(1000);
@@ -34,7 +34,23 @@ public class TestaContas {
 
 	@Test(expected = ValorInvalidoException.class)
 	public void NaoDepositaValorNegativo() {
-		Conta cp = new ContaCorrente();
+		Conta cp = new ContaCorrente(111);
 		cp.deposita(-100);
+	}
+
+	@Test
+	public void ComparaComIgual() {
+		Conta cc = new ContaCorrente(112);
+		Conta cc2 = new ContaCorrente(112);
+
+		assertEquals(cc, cc2);
+	}
+	
+	@Test
+	public void ComparaComEquals(){
+		Conta cc = new ContaCorrente(11);
+		Conta cc2 = new ContaCorrente(11);
+
+		assertTrue(cc.equals(cc2));
 	}
 }
