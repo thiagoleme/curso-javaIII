@@ -35,14 +35,29 @@ public class TestaString {
 
 		String inverter2 = "anotaram a data da maratona";
 		TestaString.imprimeInvertido(inverter2);
-		
+
 		String inverterPalavras = "Socorram-me, subi no ônibus em Marrocos";
 		TestaString.imprimePalavrasInvertidas(inverterPalavras);
+
+		String x = "32522411";
+		int value = TestaString.converteParaInteiro(x);
+	}
+
+	private static int converteParaInteiro(String x) {
+		System.out.println("String recebida: " + x);
+		int value = 0;
+        while (x.length() > 0) {
+            char c = x.charAt(0);
+            value = value * 10 + (c - '0');
+            x = x.substring(1);
+        }
+		System.out.println("Inteiro: " + value);
+		return value;
 	}
 
 	private static void imprimePalavrasInvertidas(String inverter) {
 		String[] split = inverter.split(" ");
-		for (int i = split.length - 1; i >= 0 ; i--) {
+		for (int i = split.length - 1; i >= 0; i--) {
 			System.out.print(split[i] + " ");
 		}
 		System.out.println();
@@ -50,8 +65,8 @@ public class TestaString {
 
 	private static void imprimeInvertido(String inverter) {
 		System.out.print("\t");
-        StringBuilder invertido = new StringBuilder(inverter).reverse();
-        System.out.println(invertido);
+		StringBuilder invertido = new StringBuilder(inverter).reverse();
+		System.out.println(invertido);
 	}
 
 	private static void imprimeCaracteres(String string) {
