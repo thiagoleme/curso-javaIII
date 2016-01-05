@@ -26,5 +26,15 @@ public class TestaString {
 	    Conta conta = new ContaCorrente();
 	    conta.deposita(150);
 	    System.out.println(conta);
+	    
+	    String caracter = "Teste impressão por caracter!";
+	    TestaString.imprimeCaracteres(caracter);
+	}
+
+	private static void imprimeCaracteres(String string) {
+		for (int i = 0; i < string.length(); i++) {
+			System.out.println(string.charAt(i));
+		}
+		
 	}
 }

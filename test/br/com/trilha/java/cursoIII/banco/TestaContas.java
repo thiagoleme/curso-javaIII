@@ -49,8 +49,9 @@ public class TestaContas {
 	@Test
 	public void ComparaComEquals(){
 		Conta cc = new ContaCorrente(11);
+		cc.setNome("Teste 1");
 		Conta cc2 = new ContaCorrente(11);
-
+		cc2.setNome("Teste 1");
 		assertTrue(cc.equals(cc2));
 	}
 }

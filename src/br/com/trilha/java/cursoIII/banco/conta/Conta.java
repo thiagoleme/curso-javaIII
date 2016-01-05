@@ -3,6 +3,7 @@ package br.com.trilha.java.cursoIII.banco.conta;
 public abstract class Conta {
 	protected double saldo;
 	private int numero;
+	private String nome;
 
 	public Conta(int numero) {
 		this.numero = numero;
@@ -15,6 +16,10 @@ public abstract class Conta {
 
 	public double getSaldo() {
 		return saldo;
+	}
+
+	public String getNome() {
+		return nome;
 	}
 
 	public void deposita(double deposito) {
@@ -32,7 +37,8 @@ public abstract class Conta {
 	@Override
 	public String toString() {
 		String descr = "*** " + this.getClass().getSimpleName() + " ***";
-		descr += "\n NÃºmero: " + this.getNumero();
+		descr += "\n Nome: " + this.getNome();
+		descr += "\n Número: " + this.getNumero();
 		descr += "\n Saldo: R$" + this.getSaldo();
 		return descr;
 	}
@@ -44,10 +50,14 @@ public abstract class Conta {
 		}
 
 		Conta outraConta = (Conta) obj;
-		return this.getNumero() == outraConta.getNumero();
+		return (this.getNumero() == outraConta.getNumero() && this.getNome() == outraConta.getNome());
 	}
 
 	public int getNumero() {
 		return numero;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 }
