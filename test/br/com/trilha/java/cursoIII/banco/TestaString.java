@@ -29,12 +29,24 @@ public class TestaString {
 	    
 	    String caracter = "Teste impressão por caracter!";
 	    TestaString.imprimeCaracteres(caracter);
+	    
+	    String inverter = "Socorram-me, subi no ônibus em Marrocos";
+	    TestaString.imprimeInvertido(inverter);
+	    
+	    System.out.println();
+	    String inverter2 = "anotaram a data da maratona";
+	    TestaString.imprimeInvertido(inverter2);
+	}
+
+	private static void imprimeInvertido(String inverter) {
+		for (int i = inverter.length() - 1; i >= 0; i--) {
+			System.out.print(inverter.charAt(i));
+		}
 	}
 
 	private static void imprimeCaracteres(String string) {
 		for (int i = 0; i < string.length(); i++) {
 			System.out.println(string.charAt(i));
-		}
-		
+		}	
 	}
 }
