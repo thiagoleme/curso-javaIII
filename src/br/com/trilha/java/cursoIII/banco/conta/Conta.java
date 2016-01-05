@@ -2,7 +2,7 @@ package br.com.trilha.java.cursoIII.banco.conta;
 
 public abstract class Conta {
 	protected double saldo;
-	private int numero;
+	protected int numero;
 	private String nome;
 
 	public Conta(int numero) {
