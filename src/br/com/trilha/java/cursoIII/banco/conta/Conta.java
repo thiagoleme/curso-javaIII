@@ -3,7 +3,7 @@ package br.com.trilha.java.cursoIII.banco.conta;
 public abstract class Conta {
 	protected double saldo;
 	protected int numero;
-	private String nome;
+	private String nomeDoCliente = "";
 
 	public Conta(int numero) {
 		this.numero = numero;
@@ -19,7 +19,7 @@ public abstract class Conta {
 	}
 
 	public String getNome() {
-		return nome;
+		return nomeDoCliente;
 	}
 
 	public void deposita(double deposito) {
@@ -36,9 +36,9 @@ public abstract class Conta {
 
 	@Override
 	public String toString() {
-		String descr = "*** " + this.getClass().getSimpleName() + " ***";
+		String descr = "\n*** " + this.getClass().getSimpleName() + " ***";
 		descr += "\n Nome: " + this.getNome();
-		descr += "\n Número: " + this.getNumero();
+		descr += "\n Nï¿½mero: " + this.getNumero();
 		descr += "\n Saldo: R$" + this.getSaldo();
 		return descr;
 	}
@@ -58,6 +58,6 @@ public abstract class Conta {
 	}
 
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nomeDoCliente = nome;
 	}
 }

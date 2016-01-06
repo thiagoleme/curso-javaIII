@@ -21,6 +21,10 @@ public class ContaPoupanca extends Conta implements Comparable<Conta> {
 
 	@Override
 	public int compareTo(Conta o) {
-		return this.getNumero() - o.getNumero();
+		int comp = this.getNome().compareTo(o.getNome());
+		if (comp == 0) {
+			return this.getNumero() - o.getNumero();
+		}
+		return comp;
 	}
 }
