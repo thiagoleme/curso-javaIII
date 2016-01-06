@@ -38,19 +38,31 @@ public abstract class Conta {
 	public String toString() {
 		String descr = "\n*** " + this.getClass().getSimpleName() + " ***";
 		descr += "\n Nome: " + this.getNome();
-		descr += "\n N�mero: " + this.getNumero();
+		descr += "\n Numero: " + this.getNumero();
 		descr += "\n Saldo: R$" + this.getSaldo();
 		return descr;
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (!(obj instanceof Conta)) {
-			throw new ClassCastException();
-		}
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + numero;
+		return result;
+	}
 
-		Conta outraConta = (Conta) obj;
-		return (this.getNumero() == outraConta.getNumero() && this.getNome() == outraConta.getNome());
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Conta other = (Conta) obj;
+		if (numero != other.numero)
+			return false;
+		return true;
 	}
 
 	public int getNumero() {
