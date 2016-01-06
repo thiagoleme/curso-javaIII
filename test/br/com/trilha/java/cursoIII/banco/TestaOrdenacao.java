@@ -11,6 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.TreeSet;
 
 import org.junit.Test;
 
@@ -171,5 +172,31 @@ public class TestaOrdenacao {
 		long fim = System.currentTimeMillis();
 		double tempo = (fim - inicio) / 1000.0;
 		System.out.println("Tempo gasto: " + tempo);
+	}
+	
+	@Test
+	public void OrdenarComTreeSet(){
+		TreeSet<Integer> set = new TreeSet<>();
+		int total = 1000;
+		
+		for (int i = 1; i <= total ; i++) {
+			set.add(i);
+		}
+		
+		//for (Integer i : set.descendingSet()) {
+			//System.out.println(i.intValue());
+		//}
+	}
+	
+	@Test
+	public void OrdenarComArrayList(){
+		List<Integer> list = new ArrayList<>();
+		int total = 1000;
+		
+		for (int i = 1; i <= total ; i++) {
+			list.add(i);
+		}
+
+		Collections.reverse(list);
 	}
 }
